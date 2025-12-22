@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCalculator();
     initContactForm();
     initScrollAnimations();
+    initFAQ();
 });
 
 /* ============================================
@@ -307,12 +308,45 @@ function initScrollAnimations() {
 
     // Observe elements
     const animatedElements = document.querySelectorAll(
-        '.pillar-card, .detail-card, .income-card, .process-step'
+        '.pillar-card, .detail-card, .income-card, .process-step, .document-card, .seller-card, .faq-category'
     );
-    
+
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         observer.observe(el);
+    });
+}
+
+/* ============================================
+   FAQ ACCORDION
+   ============================================ */
+function initFAQ() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const isActive = this.classList.contains('active');
+
+            // Close all other FAQ items in the same category
+            const category = faqItem.closest('.faq-category');
+            category.querySelectorAll('.faq-question.active').forEach(activeQ => {
+                if (activeQ !== this) {
+                    activeQ.classList.remove('active');
+                    activeQ.parentElement.querySelector('.faq-answer').classList.remove('open');
+                }
+            });
+
+            // Toggle current item
+            if (isActive) {
+                this.classList.remove('active');
+                answer.classList.remove('open');
+            } else {
+                this.classList.add('active');
+                answer.classList.add('open');
+            }
+        });
     });
 }
 

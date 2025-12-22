@@ -1927,6 +1927,215 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+.section-faq {
+    background: var(--color-bg-alt);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+}
+
+.faq-category {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-category-title {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--color-bg-alt);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.faq-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+    background: var(--color-bg-alt);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: all var(--transition-fast);
+    gap: var(--space-md);
+}
+
+.faq-question:hover {
+    background: var(--color-bg);
+}
+
+.faq-question.active {
+    background: var(--color-primary);
+    color: white;
+}
+
+.faq-toggle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform var(--transition-fast);
+}
+
+.faq-question.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base), padding var(--transition-base);
+}
+
+.faq-answer.open {
+    max-height: 300px;
+    padding: var(--space-md);
+}
+
+.faq-answer p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+/* ============================================
+   MAP IMPROVEMENTS
+   ============================================ */
+.map-container {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* ============================================
+   VISUAL IMPROVEMENTS - SPACING & HIERARCHY
+   ============================================ */
+
+/* Improved section spacing */
+.section {
+    padding: var(--space-4xl) 0;
+}
+
+.section-header {
+    margin-bottom: var(--space-3xl);
+}
+
+/* Better card shadows and hover states */
+.pillar-card,
+.detail-card,
+.document-card,
+.seller-card,
+.faq-category {
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.pillar-card:hover,
+.detail-card:hover,
+.document-card:hover,
+.seller-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Improved trust bar */
+.trust-bar {
+    padding: var(--space-lg) 0;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+}
+
+/* Better income section cards */
+.income-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Calculator visual improvements */
+.calculator-wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.result-card {
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* Legal section improvements */
+.legal-problem,
+.legal-solution {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Better form styling */
+.contact-form-wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Improved CTA section */
+.section-cta {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+}
+
+/* Footer improvements */
+.footer {
+    background: linear-gradient(180deg, var(--color-bg-dark) 0%, #111 100%);
+}
+
+/* Subtle animations for interactive elements */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+}
+
+.btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Responsive FAQ */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Print styles */
 @media print {
     .navbar,
