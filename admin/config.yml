@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Media files storage
+media_folder: "images"
+public_folder: "/images"
+
+# Site settings
+site_url: https://nanjangud-farm.netlify.app
+display_url: https://nanjangud-farm.netlify.app
+
+collections:
+  # Gallery Images
+  - name: "gallery"
+    label: "Photo Gallery"
+    folder: "_data/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Order", name: "order", widget: "number", default: 0 }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+
+  # Property Documents
+  - name: "documents"
+    label: "Property Documents"
+    folder: "_data/documents"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Document Name", name: "title", widget: "string" }
+      - { label: "Document Type", name: "type", widget: "select", options: ["RTC", "EC", "Survey Sketch", "Other"] }
+      - { label: "File", name: "file", widget: "file", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Available", name: "available", widget: "boolean", default: true }
+
+  # Site Settings (single file)
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "_data/settings.json"
+        fields:
+          - { label: "Site Title", name: "site_title", widget: "string", default: "Nanjangud Farms" }
+          - label: "Video Section"
+            name: "video"
+            widget: "object"
+            fields:
+              - { label: "Video URL (YouTube/Vimeo embed)", name: "url", widget: "string", required: false }
+              - { label: "Video Title", name: "title", widget: "string", default: "Property Drone Video" }
+              - { label: "Video Description", name: "description", widget: "string", default: "Full aerial walkthrough of the 7-acre farm" }
+          - label: "Contact Info (Private - shown after form submit)"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Phone/WhatsApp", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+          - label: "Property Details"
+            name: "property"
+            widget: "object"
+            fields:
+              - { label: "Price (Cr)", name: "price", widget: "string", default: "6.39" }
+              - { label: "Annual Income (Lakhs)", name: "income", widget: "string", default: "25" }
+              - { label: "Total Area", name: "area", widget: "string", default: "7 Acres 4 Guntas" }
