@@ -175,14 +175,15 @@ function initCalculator() {
    ============================================ */
 function initContactForm() {
     const form = document.getElementById('contact-form');
-    
+    const formSuccess = document.getElementById('form-success');
+
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        
+
         // Get form data
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
-        
+
         // Validate
         if (!data.name || !data.phone) {
             showNotification('Please fill in required fields', 'error');
@@ -195,28 +196,33 @@ function initContactForm() {
         submitBtn.innerHTML = 'Sending...';
         submitBtn.disabled = true;
 
-        // Simulate form submission (replace with actual API call)
+        // Process form submission
         setTimeout(() => {
-            // Create WhatsApp message
-            const message = encodeURIComponent(
-                `*New Enquiry - Nanjangud Farm*\n\n` +
-                `Name: ${data.name}\n` +
-                `Phone: ${data.phone}\n` +
-                `Email: ${data.email || 'Not provided'}\n` +
-                `Location: ${data.location || 'Not provided'}\n` +
-                `Interest: ${data.interest || 'Not specified'}\n` +
-                `Message: ${data.message || 'No message'}`
-            );
+            // Store enquiry data (for backend integration later)
+            const enquiry = {
+                name: data.name,
+                phone: data.phone,
+                email: data.email || '',
+                location: data.location || '',
+                interest: data.interest || '',
+                message: data.message || '',
+                timestamp: new Date().toISOString()
+            };
 
-            // Open WhatsApp (replace with actual number)
-            window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+            // Store in localStorage for now (can be replaced with API call)
+            const enquiries = JSON.parse(localStorage.getItem('farmEnquiries') || '[]');
+            enquiries.push(enquiry);
+            localStorage.setItem('farmEnquiries', JSON.stringify(enquiries));
 
-            // Reset form
-            form.reset();
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            
-            showNotification('Enquiry sent! We\'ll contact you soon.', 'success');
+            // Hide form elements and show success message
+            const formElements = form.querySelectorAll('.form-group, .form-row, button, .form-note');
+            formElements.forEach(el => el.style.display = 'none');
+            formSuccess.style.display = 'block';
+
+            // Track the conversion
+            trackEvent('Form', 'Submit', 'Enquiry');
+
+            showNotification('Enquiry submitted successfully!', 'success');
         }, 1000);
     });
 }
