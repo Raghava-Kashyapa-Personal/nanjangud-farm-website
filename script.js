@@ -197,34 +197,30 @@ function initContactForm() {
         submitBtn.innerHTML = 'Sending...';
         submitBtn.disabled = true;
 
-        // Process form submission
-        setTimeout(() => {
-            // Store enquiry data (for backend integration later)
-            const enquiry = {
-                name: data.name,
-                phone: data.phone,
-                email: data.email || '',
-                location: data.location || '',
-                interest: data.interest || '',
-                message: data.message || '',
-                timestamp: new Date().toISOString()
-            };
 
-            // Store in localStorage for now (can be replaced with API call)
-            const enquiries = JSON.parse(localStorage.getItem('farmEnquiries') || '[]');
-            enquiries.push(enquiry);
-            localStorage.setItem('farmEnquiries', JSON.stringify(enquiries));
-
-            // Hide form elements and show success message
-            const formElements = form.querySelectorAll('.form-group, .form-row, button, .form-note');
-            formElements.forEach(el => el.style.display = 'none');
-            formSuccess.style.display = 'block';
-
-            // Track the conversion
-            trackEvent('Form', 'Submit', 'Enquiry');
-
-            showNotification('Enquiry submitted successfully!', 'success');
-        }, 1000);
+        // Submit to Netlify Forms
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(response => {
+            if (response.ok) {
+                const formElements = form.querySelectorAll('.form-group, .form-row, button, .form-note');
+                formElements.forEach(el => el.style.display = 'none');
+                formSuccess.style.display = 'block';
+                trackEvent('Form', 'Submit', 'Enquiry');
+                showNotification('Enquiry submitted successfully!', 'success');
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            showNotification('Something went wrong. Please try again.', 'error');
+        });
     });
 }
 
