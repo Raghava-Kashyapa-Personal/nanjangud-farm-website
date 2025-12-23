@@ -27,10 +27,16 @@ A professional marketing website for a 7-acre turnkey income-generating farm pro
 
 ```
 nanjangud-farm-website/
-├── index.html      # Main landing page
-├── styles.css      # All styles
-├── script.js       # Calculator & interactions
-└── README.md       # This file
+├── index.html          # Main landing page
+├── styles.css          # All styles
+├── script.js           # Calculator & interactions
+├── claude.md           # AI assistant context
+├── README.md           # This file
+└── images/
+    ├── team/           # Team member photos (raghava.jpg, venkatesh.jpg)
+    ├── gallery/        # Farm/property photos
+    ├── documents/      # Document thumbnails/previews
+    └── property/       # Property detail images
 ```
 
 ## 🚀 Features
