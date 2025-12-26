@@ -4,7 +4,7 @@
 Marketing website for 7-acre income farm in Nanjangud, Karnataka.
 
 **Live Site:** https://incomefarms.in
-**Hosting:** Netlify (with custom domain)
+**Hosting:** Cloudflare Pages
 **Repo:** https://github.com/Raghava-Kashyapa-Personal/nanjangud-farm-website
 
 ---
