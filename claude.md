@@ -1,4 +1,4 @@
-# Nanjangud Farm Website
+# Income Farms Website
 
 ## Project Overview
 Marketing website for 7-acre income farm in Nanjangud, Karnataka.

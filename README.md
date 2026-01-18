@@ -1,4 +1,4 @@
-# Nanjangud Farm - Premium Income Property Website
+# Income Farms - Premium Income Property Website
 
 A professional marketing website for a 7-acre turnkey income-generating farm property in Nanjangud, Karnataka.
 

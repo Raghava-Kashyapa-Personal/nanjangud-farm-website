@@ -1,5 +1,5 @@
 /**
- * Nanjangud Farms - Interactive Website Script
+ * Income Farms - Interactive Website Script
  * Handles: Navigation, ROI Calculator, Form submission, Animations
  */
 
