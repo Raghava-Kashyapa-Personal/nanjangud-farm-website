@@ -310,6 +310,49 @@ img {
     min-height: 220px;
 }
 
+.project-media-stack {
+    display: grid;
+    gap: 16px;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.gallery-more {
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-more img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.gallery-more-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(11, 31, 20, 0.6);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: var(--radius-sm);
+}
+
 .project-placeholder {
     display: flex;
     align-items: center;
