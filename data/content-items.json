@@ -1,0 +1,102 @@
+﻿[
+  {
+    "title": "Longevity Infrastructure 101: Why Biology Beats Lifestyle Optics",
+    "slug": "longevity-infrastructure-101",
+    "pillar": "longevity-wellness",
+    "summary": "A field-grounded framework for evaluating health outcomes through air, water, food, and soil quality over decades.",
+    "publish_date": "2026-03-01",
+    "status": "published",
+    "type": "Pillar Explainer",
+    "url": "resource.html?slug=longevity-infrastructure-101"
+  },
+  {
+    "title": "How To Verify Organic Claims Without Falling For Labels",
+    "slug": "verify-organic-claims",
+    "pillar": "organic-clean-food",
+    "summary": "A practical verification method using certification evidence, farm visits, and recurring lab testing.",
+    "publish_date": "2026-03-02",
+    "status": "published",
+    "type": "Pillar Explainer",
+    "url": "resource.html?slug=verify-organic-claims"
+  },
+  {
+    "title": "People Behind The Land: Why On-Ground Operators Matter",
+    "slug": "people-behind-the-land",
+    "pillar": "people-behind-land",
+    "summary": "Operator continuity and local farm knowledge as the hidden variable in long-term farm outcomes.",
+    "publish_date": "2026-03-03",
+    "status": "published",
+    "type": "Pillar Explainer",
+    "url": "resource.html?slug=people-behind-the-land"
+  },
+  {
+    "title": "Community As Infrastructure: Shared Meals, Shared Accountability",
+    "slug": "community-as-infrastructure",
+    "pillar": "community-experiences",
+    "summary": "How curated community design reduces drift and increases stewardship quality in habitat projects.",
+    "publish_date": "2026-03-03",
+    "status": "published",
+    "type": "Pillar Explainer",
+    "url": "resource.html?slug=community-as-infrastructure"
+  },
+  {
+    "title": "Sustainability That Pays: Operating Economics Without Maintenance Traps",
+    "slug": "sustainability-that-pays",
+    "pillar": "sustainability-pays",
+    "summary": "A model for sustaining operations from farm activity rather than fee extraction from owners.",
+    "publish_date": "2026-03-04",
+    "status": "published",
+    "type": "Pillar Explainer",
+    "url": "resource.html?slug=sustainability-that-pays"
+  },
+  {
+    "title": "Transparency Systems: Turning Trust Into A Repeatable Process",
+    "slug": "transparency-systems",
+    "pillar": "transparency-trust",
+    "summary": "How testing cadence, origin disclosure, and open visits create durable trust signals.",
+    "publish_date": "2026-03-04",
+    "status": "published",
+    "type": "Pillar Explainer",
+    "url": "resource.html?slug=transparency-systems"
+  },
+  {
+    "title": "Guide: Pre-Site-Visit Checklist For Families",
+    "slug": "pre-site-visit-checklist",
+    "pillar": "transparency-trust",
+    "summary": "Questions to prepare before a farm visit so you can evaluate facts and avoid sales theater.",
+    "publish_date": "2026-03-05",
+    "status": "published",
+    "type": "Practical Guide",
+    "url": "resource.html?slug=pre-site-visit-checklist"
+  },
+  {
+    "title": "Guide: Mapping Seasonal Produce To Household Needs",
+    "slug": "seasonal-produce-household-planning",
+    "pillar": "organic-clean-food",
+    "summary": "A practical planning guide for matching seasonal availability with real household consumption.",
+    "publish_date": "2026-03-06",
+    "status": "published",
+    "type": "Practical Guide",
+    "url": "resource.html?slug=seasonal-produce-household-planning"
+  },
+  {
+    "title": "Guide: Evaluating Farm Habitat Governance Before You Buy",
+    "slug": "farm-habitat-governance-guide",
+    "pillar": "community-experiences",
+    "summary": "Governance patterns that keep communities stable and prevent long-term model drift.",
+    "publish_date": "2026-03-07",
+    "status": "published",
+    "type": "Practical Guide",
+    "url": "resource.html?slug=farm-habitat-governance-guide"
+  },
+  {
+    "title": "Managed Farmland Due Diligence Checklist",
+    "slug": "managed-farmland-due-diligence-checklist",
+    "pillar": "transparency-trust",
+    "summary": "The full checklist used to evaluate legal, operational, organic, and economic integrity before committing capital.",
+    "publish_date": "2026-03-08",
+    "status": "published",
+    "type": "Farm Visit Prep Checklist",
+    "url": "resource.html?slug=managed-farmland-due-diligence-checklist"
+  }
+]

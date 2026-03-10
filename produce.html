@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Dirgha Farms produce streams, testing standards, seasonality, and waitlist registration.">
+  <meta property="og:title" content="Dirgha Farms Produce | Organic, Tested, Traceable">
+  <meta property="og:description" content="Join the produce waitlist for limited seasonal boxes from Dirgha Farms.">
+  <meta property="og:type" content="website">
+  <title>Dirgha Farms Produce | Organic, Tested, Traceable</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="produce">
+  <div class="texture"></div>
+  <nav class="site-nav" id="site-nav">
+    <div class="wrap nav-wrap">
+      <a href="index.html" class="brand">DIRGHA FARMS</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="produce.html" class="active">Produce</a>
+        <a href="resources.html">Resources</a>
+        <a href="#waitlist" class="btn btn-nav">Join Produce Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero produce-hero reveal">
+    <div class="wrap">
+      <p class="eyebrow">Dirgha Produce Program</p>
+      <h1>Organic produce that is tested, traceable, and seasonally honest.</h1>
+      <p class="lead">This is a relationship product, not a marketing gimmick. Limited slots, farm-linked updates, and clean-food transparency from source to delivery.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal" id="portfolio">
+      <div class="wrap">
+        <p class="eyebrow">Current Portfolio</p>
+        <h2>Two farm streams, coordinated supply.</h2>
+        <div class="cards-2">
+          <article class="card">
+            <img src="images/gallery/arecanut-bunch.jpg" alt="Arecanut cluster at the Katur farm">
+            <h3>Katur owned farm</h3>
+            <p>Mature and developing sections with arecanut, coconut, sapota, sitaphal, and figs as the active crop base.</p>
+          </article>
+          <article class="card">
+            <img src="images/gallery/banana-plantation.jpg" alt="Banana and mixed crops from the organic-certified family farm">
+            <h3>Organic-certified family farm</h3>
+            <p>Jackfruit, papaya, seasonal vegetables, mangoes, bananas, and coconuts with independent testing cycles.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt reveal" id="seasonality">
+      <div class="wrap">
+        <p class="eyebrow">Seasonality Calendar</p>
+        <h2>Expected seasonal availability.</h2>
+        <div class="season-grid">
+          <article>
+            <h3>Jan-Apr</h3>
+            <p>Arecanut post-harvest cycles, papaya, mixed vegetables, coconut.</p>
+          </article>
+          <article>
+            <h3>May-Aug</h3>
+            <p>Mango, jackfruit, banana, vegetables, coconut.</p>
+          </article>
+          <article>
+            <h3>Sep-Dec</h3>
+            <p>Arecanut prep and harvest windows, sapota, sitaphal, figs, vegetables.</p>
+          </article>
+        </div>
+        <p class="muted">Availability varies by weather and crop health. We prioritize field truth over fixed catalog promises.</p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="testing">
+      <div class="wrap two-col">
+        <div>
+          <p class="eyebrow">Testing And Traceability</p>
+          <h2>Every box should answer: where was this grown and how was it tested?</h2>
+          <ul class="check-list">
+            <li>Independent laboratory testing on recurring schedule</li>
+            <li>Testing summaries shared with subscribers</li>
+            <li>Farm-origin disclosures with each produce cycle</li>
+            <li>Open farm-visit policy for active members</li>
+          </ul>
+        </div>
+        <div class="visual-card">
+          <img src="images/concepts/traceability-map.svg" alt="Traceability map from crop to testing to member delivery">
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt reveal" id="benefits">
+      <div class="wrap">
+        <p class="eyebrow">Subscriber Benefits</p>
+        <h2>Why people join the Dirgha produce circle.</h2>
+        <div class="cards-3">
+          <article class="card">
+            <h3>Priority seasonal allocations</h3>
+            <p>Waitlist members get first access to limited slots during peak crop windows.</p>
+          </article>
+          <article class="card">
+            <h3>Direct farm context</h3>
+            <p>Updates include crop and farm context, not just delivery notifications.</p>
+          </article>
+          <article class="card">
+            <h3>Trust before scale</h3>
+            <p>We keep the program intentionally controlled to preserve quality and transparency.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="waitlist">
+      <div class="wrap form-layout">
+        <div>
+          <p class="eyebrow">Primary Conversion</p>
+          <h2>Join the produce waitlist.</h2>
+          <p>Tell us your preferences. We will prioritize slots based on alignment, location feasibility, and active seasonal cycles.</p>
+          <p class="muted">No payment is collected in this phase. This form is for demand planning and early allocations.</p>
+        </div>
+        <form id="produce-waitlist-form" class="form-card" novalidate>
+          <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" required>
+          </label>
+          <label>City
+            <input type="text" name="city" required>
+          </label>
+          <label>Household Size
+            <input type="number" min="1" max="12" name="household_size" required>
+          </label>
+          <label>Preferred Box
+            <select name="box_preference" required>
+              <option value="">Select one</option>
+              <option value="essentials">Essentials (weekly staples)</option>
+              <option value="seasonal-mix">Seasonal Mix</option>
+              <option value="fruit-forward">Fruit Forward</option>
+            </select>
+          </label>
+          <label>Preferred Frequency
+            <select name="frequency_preference" required>
+              <option value="">Select one</option>
+              <option value="weekly">Weekly</option>
+              <option value="bi-weekly">Bi-weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="whatsapp_opt_in" value="true">
+            <span>Yes, I want WhatsApp updates for availability and farm events.</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="consent" value="true" required>
+            <span>I consent to receive updates from Dirgha Farms and agree to data storage for outreach.</span>
+          </label>
+          <input type="hidden" name="source" value="produce-page-waitlist">
+          <button type="submit" class="btn btn-solid">Submit Waitlist Request</button>
+          <p class="form-response" data-form-response></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Dirgha Farms</h3>
+        <p>Designed for longevity and clarity.</p>
+      </div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="produce.html">Produce</a>
+        <a href="resources.html">Resources</a>
+      </div>
+      <div>
+        <p>For produce queries: hello@dirghafarms.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

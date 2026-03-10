@@ -1,0 +1,19 @@
+﻿name = "dirgha-farms-api"
+main = "src/index.js"
+compatibility_date = "2026-03-09"
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGIN = "*"
+RATE_LIMIT_PER_MINUTE = "20"
+LEAD_MAGNET_URL = "https://example.com/assets/managed-farmland-checklist.pdf"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dirgha_farms"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+# Configure these as secrets via wrangler:
+# RESEND_API_KEY
+# RESEND_FROM_EMAIL
+# TURNSTILE_SECRET_KEY (optional)

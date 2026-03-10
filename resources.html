@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dirgha Farms resources: managed farmland due diligence checklist, content pillars, and newsletter for ongoing learning.">
+  <meta property="og:title" content="Dirgha Farms Resources | Trust-First Farmland Learning Hub">
+  <meta property="og:description" content="Download the due diligence checklist and follow the six Dirgha content pillars.">
+  <meta property="og:type" content="website">
+  <title>Dirgha Farms Resources | Checklist, Content, Newsletter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="resources">
+  <div class="texture"></div>
+  <nav class="site-nav" id="site-nav">
+    <div class="wrap nav-wrap">
+      <a href="index.html" class="brand">DIRGHA FARMS</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="produce.html">Produce</a>
+        <a href="resources.html" class="active">Resources</a>
+        <a href="produce.html#waitlist" class="btn btn-nav">Join Produce Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero resources-hero reveal">
+    <div class="wrap">
+      <p class="eyebrow">Resources</p>
+      <h1>Learn the right questions before you trust any farmland project.</h1>
+      <p class="lead">This is our trust-first content layer: transparent field notes, due diligence education, and long-form thinking around longevity and land stewardship.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal" id="lead-magnet">
+      <div class="wrap form-layout">
+        <div>
+          <p class="eyebrow">Lead Magnet</p>
+          <h2>Managed Farmland Due Diligence Checklist</h2>
+          <p>Get the checklist that helps you evaluate title clarity, operator credibility, organic proof, governance, maintenance economics, and exit realities before any purchase decision.</p>
+          <p class="muted">After submission, the PDF is sent via email and made available for immediate download.</p>
+        </div>
+        <form id="lead-magnet-form" class="form-card" novalidate>
+          <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" required>
+          </label>
+          <label>City
+            <input type="text" name="city" required>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="whatsapp_opt_in" value="true">
+            <span>Send me occasional WhatsApp updates on farm visits and new resources.</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="consent" value="true" required>
+            <span>I consent to receive resources and communication from Dirgha Farms.</span>
+          </label>
+          <input type="hidden" name="source" value="resources-lead-magnet">
+          <button type="submit" class="btn btn-solid">Get The Checklist</button>
+          <p class="form-response" data-form-response></p>
+          <a class="inline-download" href="assets/managed-farmland-checklist.pdf" download>Download directly</a>
+        </form>
+      </div>
+    </section>
+
+    <section class="section alt reveal" id="content-pillars">
+      <div class="wrap">
+        <p class="eyebrow">Six Content Pillars</p>
+        <h2>Continuous content designed for thoughtful decision-making.</h2>
+        <div class="pillars-grid" id="pillar-links">
+          <a href="resources.html?pillar=longevity-wellness">Longevity and modern wellness</a>
+          <a href="resources.html?pillar=organic-clean-food">Authentic organic and clean food</a>
+          <a href="resources.html?pillar=people-behind-land">People behind the land</a>
+          <a href="resources.html?pillar=community-experiences">Community and experiences</a>
+          <a href="resources.html?pillar=sustainability-pays">Sustainability that pays</a>
+          <a href="resources.html?pillar=transparency-trust">Transparency and trust</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="latest-resources">
+      <div class="wrap">
+        <div class="section-head-inline">
+          <div>
+            <p class="eyebrow">Content Hub</p>
+            <h2>Latest resources</h2>
+          </div>
+          <p class="muted" id="filter-label"></p>
+        </div>
+        <div id="resource-list" class="resource-grid"></div>
+      </div>
+    </section>
+
+    <section class="section alt reveal" id="newsletter">
+      <div class="wrap form-layout">
+        <div>
+          <p class="eyebrow">Newsletter</p>
+          <h2>Subscribe for monthly field intelligence.</h2>
+          <p>We publish farm updates, testing snapshots, seasonal buying notes, and practical due diligence frameworks.</p>
+        </div>
+        <form id="newsletter-form" class="form-card" novalidate>
+          <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Name (optional)
+            <input type="text" name="name">
+          </label>
+          <label>Interests
+            <select name="interests">
+              <option value="">Select one</option>
+              <option value="produce">Produce program updates</option>
+              <option value="farm-visits">Farm visit opportunities</option>
+              <option value="longevity-content">Longevity and trust content</option>
+            </select>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="consent" value="true" required>
+            <span>I consent to receive newsletter updates from Dirgha Farms.</span>
+          </label>
+          <input type="hidden" name="source" value="resources-newsletter">
+          <button type="submit" class="btn btn-solid">Subscribe</button>
+          <p class="form-response" data-form-response></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section reveal" id="book-visit">
+      <div class="wrap cta-grid simple">
+        <div>
+          <p class="eyebrow">Secondary CTA</p>
+          <h2>Ready to experience the farm in person?</h2>
+          <p>Join the produce waitlist first, then request a guided farm day with our team.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-solid" href="produce.html#waitlist">Join Produce Waitlist</a>
+          <a class="btn btn-outline" href="mailto:hello@dirghafarms.com?subject=Farm%20Day%20Request">Request Farm Day</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Dirgha Farms</h3>
+        <p>Designed for longevity and clarity.</p>
+      </div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="produce.html">Produce</a>
+        <a href="resources.html">Resources</a>
+      </div>
+      <div>
+        <p>hello@dirghafarms.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

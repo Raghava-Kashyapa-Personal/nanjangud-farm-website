@@ -1,0 +1,42 @@
+﻿<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Traceability Map</title>
+  <desc id="desc">Map-like conceptual journey from crop harvest to member delivery.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6f1e7"/>
+      <stop offset="100%" stop-color="#e8deca"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="760" fill="url(#bg)"/>
+
+  <path d="M90 520 C 260 390, 420 360, 560 420 C 690 475, 780 470, 930 360 C 1010 300, 1090 260, 1120 170" stroke="#c89445" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <path d="M94 520 C 270 540, 420 580, 560 540 C 730 490, 860 510, 1040 640" stroke="#2f5d43" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+  <g>
+    <circle cx="160" cy="510" r="74" fill="#2f5d43"/>
+    <text x="160" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Harvest</text>
+  </g>
+  <g>
+    <circle cx="420" cy="410" r="74" fill="#2f5d43"/>
+    <text x="420" y="404" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Batch</text>
+    <text x="420" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Tagging</text>
+  </g>
+  <g>
+    <circle cx="680" cy="450" r="74" fill="#2f5d43"/>
+    <text x="680" y="444" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Testing</text>
+    <text x="680" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Reports</text>
+  </g>
+  <g>
+    <circle cx="935" cy="360" r="74" fill="#2f5d43"/>
+    <text x="935" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Dispatch</text>
+    <text x="935" y="383" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Record</text>
+  </g>
+  <g>
+    <circle cx="1045" cy="630" r="74" fill="#2f5d43"/>
+    <text x="1045" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Member</text>
+    <text x="1045" y="652" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ffffff">Delivery</text>
+  </g>
+
+  <text x="600" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="58" fill="#2f5d43">Traceability Map</text>
+  <text x="600" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" fill="#546651">From crop to report to household, every step is auditable.</text>
+</svg>

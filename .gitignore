@@ -20,6 +20,8 @@ Thumbs.db
 
 # Node modules (if added later)
 node_modules/
+worker/.wrangler/
+worker/.dev.vars
 
 # Logs
 *.log

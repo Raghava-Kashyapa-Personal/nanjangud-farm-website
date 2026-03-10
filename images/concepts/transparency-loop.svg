@@ -1,0 +1,56 @@
+﻿<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Transparency Loop</title>
+  <desc id="desc">Workflow from field operations to testing to member reports.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f4ec"/>
+      <stop offset="100%" stop-color="#e5dcc8"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="760" fill="url(#bg)"/>
+
+  <g fill="#2f5d43">
+    <circle cx="210" cy="380" r="95"/>
+    <circle cx="510" cy="180" r="95"/>
+    <circle cx="840" cy="180" r="95"/>
+    <circle cx="1020" cy="380" r="95"/>
+    <circle cx="840" cy="580" r="95"/>
+    <circle cx="510" cy="580" r="95"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle">
+    <text x="210" y="375">Field</text>
+    <text x="210" y="408">Operations</text>
+    <text x="510" y="176">Sampling</text>
+    <text x="510" y="208">Protocol</text>
+    <text x="840" y="176">Lab</text>
+    <text x="840" y="208">Testing</text>
+    <text x="1020" y="375">Member</text>
+    <text x="1020" y="408">Report</text>
+    <text x="840" y="576">Origin</text>
+    <text x="840" y="608">Disclosure</text>
+    <text x="510" y="576">Farm</text>
+    <text x="510" y="608">Visits</text>
+  </g>
+
+  <g stroke="#8d6a42" stroke-width="8" fill="none">
+    <path d="M300 340 L430 250"/>
+    <path d="M600 180 L745 180"/>
+    <path d="M920 240 L985 320"/>
+    <path d="M985 440 L920 520"/>
+    <path d="M750 580 L600 580"/>
+    <path d="M430 510 L300 420"/>
+  </g>
+
+  <g fill="#8d6a42">
+    <polygon points="438,238 447,262 424,256"/>
+    <polygon points="756,168 756,192 777,180"/>
+    <polygon points="998,334 972,338 986,356"/>
+    <polygon points="986,404 972,422 998,426"/>
+    <polygon points="600,568 600,592 579,580"/>
+    <polygon points="286,407 312,401 300,384"/>
+  </g>
+
+  <text x="600" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="56" fill="#2f5d43">Trust Loop</text>
+  <text x="600" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#4a5b44">Repeatable transparency from farm activity to subscriber confidence.</text>
+</svg>

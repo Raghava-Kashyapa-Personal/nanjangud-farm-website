@@ -1,0 +1,49 @@
+﻿<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Biological Infrastructure</title>
+  <desc id="desc">Conceptual diagram of air, water, food and soil feeding longevity.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f0e6"/>
+      <stop offset="100%" stop-color="#e8ddc7"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5f8f65"/>
+      <stop offset="100%" stop-color="#2f5d43"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="600" cy="400" r="140" fill="#2f5d43"/>
+  <text x="600" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="52" fill="#ffffff">DIRGHA</text>
+  <text x="600" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">Longevity Habitat</text>
+
+  <g>
+    <circle cx="250" cy="220" r="115" fill="#ffffff" opacity="0.82"/>
+    <text x="250" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#2f5d43">Clean Air</text>
+    <text x="250" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#4e5e49">Daily exposure</text>
+    <line x1="360" y1="260" x2="500" y2="340" stroke="#2f5d43" stroke-width="4"/>
+  </g>
+
+  <g>
+    <circle cx="950" cy="220" r="115" fill="#ffffff" opacity="0.82"/>
+    <text x="950" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#2f5d43">Clean Water</text>
+    <text x="950" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#4e5e49">Source control</text>
+    <line x1="840" y1="260" x2="700" y2="340" stroke="#2f5d43" stroke-width="4"/>
+  </g>
+
+  <g>
+    <circle cx="250" cy="580" r="115" fill="#ffffff" opacity="0.82"/>
+    <text x="250" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#2f5d43">Clean Food</text>
+    <text x="250" y="615" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#4e5e49">Traceable produce</text>
+    <line x1="360" y1="540" x2="500" y2="460" stroke="#2f5d43" stroke-width="4"/>
+  </g>
+
+  <g>
+    <circle cx="950" cy="580" r="115" fill="#ffffff" opacity="0.82"/>
+    <text x="950" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#2f5d43">Living Soil</text>
+    <text x="950" y="615" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#4e5e49">Regenerative base</text>
+    <line x1="840" y1="540" x2="700" y2="460" stroke="#2f5d43" stroke-width="4"/>
+  </g>
+
+  <rect x="120" y="700" width="960" height="62" rx="20" fill="url(#leaf)"/>
+  <text x="600" y="740" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">Biological infrastructure is the foundation, not a lifestyle upgrade.</text>
+</svg>

@@ -1,113 +1,149 @@
-# Income Farms - Premium Income Property Website
+﻿# Dirgha Farms Website
 
-A professional marketing website for a 7-acre turnkey income-generating farm property in Nanjangud, Karnataka.
+Dirgha Farms is a 3-page trust-first website and lead platform centered on longevity, produce engagement, and transparent farm operations.
 
-## 🌾 Property Highlights
+## What Changed
+- Full rebrand from Income Farms to Dirgha Farms.
+- Narrative shift from ROI-first to biological-infrastructure-first.
+- New site architecture:
+  - `index.html` - Home (brand story, trust framework, model overview)
+  - `produce.html` - Produce program + primary waitlist conversion
+  - `resources.html` - Lead magnet, content hub, newsletter
+  - `resource.html` - Dynamic detail page for content items
+- Netlify form dependency removed.
+- Cloudflare Worker API added for secure form handling with D1 and Resend.
 
-- **Location**: Katuru Village, Hullahalli Hobli, Nanjangud Taluk, Mysore District
-- **Size**: 7 Acres 4 Guntas
-- **Price**: ₹6.39 Crores (₹90 Lakhs/acre)
-- **Current Income**: ₹25 Lakhs/year (Tax-Free)
-- **Projected Income (2027)**: ₹40 Lakhs/year
+## Project Structure
 
-## 🎯 Key USPs
-
-1. **Tax-Free Income**: Agricultural income is 100% exempt under Section 10(1) of IT Act
-2. **Industrial Corridor Growth**: Nanjangud is Karnataka's #2 industrial hub after Bangalore
-3. **100% Clear Title**: RTC verified, 30-year clean EC, single-owner transfer
-
-## 🛠️ Technology Stack
-
-- HTML5
-- CSS3 (Custom properties, Grid, Flexbox)
-- Vanilla JavaScript
-- Google Fonts (Playfair Display, Source Sans 3)
-
-## 📁 Project Structure
-
-```
-nanjangud-farm-website/
-├── index.html          # Main landing page
-├── styles.css          # All styles
-├── script.js           # Calculator & interactions
-├── claude.md           # AI assistant context
-├── README.md           # This file
-└── images/
-    ├── team/           # Team member photos (raghava.jpg, venkatesh.jpg)
-    ├── gallery/        # Farm/property photos
-    ├── documents/      # Document thumbnails/previews
-    └── property/       # Property detail images
-```
-
-## 🚀 Features
-
-- **Responsive Design**: Works on all devices
-- **Interactive ROI Calculator**: Adjust parameters to see projected returns
-- **Smooth Animations**: Scroll-triggered animations and transitions
-- **Contact Form**: WhatsApp integration for enquiries
-- **SEO Optimized**: Meta tags, semantic HTML, performance optimized
-
-## 💻 Local Development
-
-Simply open `index.html` in a browser. No build process required.
-
-```bash
-# Clone the repository
-git clone https://github.com/rkashyapa/nanjangud-farm-website.git
-
-# Open in browser
-open index.html
+```text
+FarmMarketing/
+|- index.html
+|- produce.html
+|- resources.html
+|- resource.html
+|- styles.css
+|- script.js
+|- assets/
+|  |- managed-farmland-checklist.pdf
+|- data/
+|  |- content-items.json
+|  |- resource-bodies.json
+|- images/
+|  |- gallery/
+|  |- team/
+|  |- concepts/
+|- worker/
+|  |- src/index.js
+|  |- src/validation.js
+|  |- migrations/001_init.sql
+|  |- tests/api.test.mjs
+|  |- wrangler.toml
+|  |- package.json
+|- docs/
+|  |- image-generation-plan.md
+|  |- imagegen-prompts.jsonl
 ```
 
-## 🌐 Deployment
+## Local Frontend Preview
+Serve the site from a local static server (recommended for JSON fetch support):
 
-This is a static website and can be deployed to:
-- GitHub Pages
-- Netlify
-- Vercel
-- Any static hosting
-
-### GitHub Pages
-
-1. Go to repository Settings
-2. Navigate to Pages
-3. Select "main" branch and save
-4. Site will be live at `https://rkashyapa.github.io/nanjangud-farm-website/`
-
-## 📊 ROI Calculator
-
-The interactive calculator supports:
-- Variable purchase price
-- Land appreciation rate (5-25%)
-- Annual income with growth projection
-- Holding period (3-20 years)
-- Comparison with FD, Equity, and Real Estate
-
-## 📝 Customization
-
-### Update Contact Info
-Edit the WhatsApp number in `script.js`:
-```javascript
-window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+```powershell
+python -m http.server 8080
 ```
 
-### Update Property Details
-All property information is in `index.html`. Search for specific sections to update.
+Then open:
+- `http://localhost:8080/index.html`
+- `http://localhost:8080/produce.html`
+- `http://localhost:8080/resources.html`
 
-### Update Styling
-CSS variables are defined at the top of `styles.css`:
-```css
-:root {
-    --color-primary: #1a4d2e;
-    --color-accent: #c9a227;
-    /* ... */
-}
+## Worker Setup (Cloudflare + D1 + Resend)
+
+1. Install worker dependencies:
+
+```powershell
+cd worker
+npm install
 ```
 
-## 📄 License
+2. Authenticate with Cloudflare:
 
-Private - Qualitas Tech © 2025
+```powershell
+npx wrangler login
+npx wrangler whoami
+```
 
-## 📞 Contact
+3. Create D1 database (once):
 
-For property enquiries: +91 98765 43210
+```powershell
+npx wrangler d1 create dirgha_farms
+```
+
+4. Update `worker/wrangler.toml` with the returned `database_id`.
+
+5. Run migration:
+
+```powershell
+npm run db:migrate
+```
+
+6. Seed the content table (optional but recommended):
+
+```powershell
+npm run db:seed-content
+```
+
+7. Set secrets:
+
+```powershell
+npx wrangler secret put RESEND_API_KEY
+npx wrangler secret put RESEND_FROM_EMAIL
+# Optional bot verification
+npx wrangler secret put TURNSTILE_SECRET_KEY
+```
+
+8. Optional vars in `wrangler.toml`:
+- `ALLOWED_ORIGIN`
+- `RATE_LIMIT_PER_MINUTE`
+- `LEAD_MAGNET_URL`
+
+9. Run locally:
+
+```powershell
+npm run dev
+```
+
+10. Deploy:
+
+```powershell
+npm run deploy
+```
+
+## API Endpoints
+- `POST /api/leads/produce-waitlist`
+- `POST /api/leads/lead-magnet`
+- `POST /api/leads/newsletter`
+- `GET /api/health`
+
+## Data Model (D1)
+- `leads`
+- `lead_events`
+- `content_items`
+- `rate_limits`
+
+## Testing
+Run worker validation tests:
+
+```powershell
+cd worker
+npm test
+```
+
+## Image Pipeline
+- Concept visuals currently shipped as SVG in `images/concepts/`.
+- AI image generation runbook and prompts are included in:
+  - `docs/image-generation-plan.md`
+  - `docs/imagegen-prompts.jsonl`
+
+## Notes
+- This phase prioritizes produce waitlist conversions and trust-based lead nurturing.
+- Plot and investment details remain selective and are shared post-qualification.

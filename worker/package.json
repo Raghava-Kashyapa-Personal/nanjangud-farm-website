@@ -1,0 +1,16 @@
+﻿{
+  "name": "dirgha-farms-worker",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 execute dirgha_farms --file ./migrations/001_init.sql",
+    "db:seed-content": "wrangler d1 execute dirgha_farms --file ./migrations/002_seed_content.sql",
+    "test": "node ./tests/smoke.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.5.0"
+  }
+}
